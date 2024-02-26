@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            /* background-color: #333; */
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* color: black; */
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+
+        @media screen and (max-width: 456px) {
+            .nav-links {
+                display: none;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin: 10px 20px;
+            }
+
+            .nav-links {
+                margin: 10px 20px;
+            }
+
+            .nav-links li {
+                margin: 5px 0;
+            }
+
+            .nav-links li a {
+                padding: 5px 0;
+                border-bottom: 1px solid white;
+                width: 100%;
+                display: block;
+            }
+        }
+
+        /* for image set */
+        .imgd {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+            /* height: ; */
+        }
+
+        .content {
+            /* position: relative; */
+            /* bottom: 80px; */
+            top: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(49, 112, 112);
+        }
+
+        .content>p {
+            padding: 20px;
+            margin: 10px;
+            /* display: ; */
+
+        }
+
+        .container {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            gap: 40px;
+        }
+
+        .image-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .image-list-item {
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+        }
+
+        .image-list-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-name {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        @media (max-width:456px) {
+            .image-list-item {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img src="logo.jpg" alt="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="imgd">
+        <img src="budha.png" alt="img">
+    </div>
+    <div class="content">
+        <h1>Our product</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente quasi autem, labore asperiores
+            mollitia consequuntur libero suscipit saepe fuga et, excepturi quidem ullam ratione?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eligendi animi ipsam maiores mollitia
+            magni similique nobis alias ex corporis et cum accusantium, libero vitae, commodi facere, quasi reiciendis
+            itaque?</p>
+    </div>
+    <div class="container">
+        <!-- <img src="budha.png" alt="Background Image" class="background-image"> -->
+        <ul class="image-list">
+            <li class="image-list-item">
+                <a href="architectural_.html">
+                    <img src="logo.jpg" alt="architectural_">
+                    <span class="image-name">architectural_</span>
+                </a>
+            </li>
+            <li class="image-list-item">
+                <a href="architectural_.html">
+                    <img src="logo.jpg" alt="architectural_">
+                    <span class="image-name">architectural_</span>
+                </a>
+            </li>
+            <li class="image-list-item">
+                <a href="architectural_.html">
+                    <img src="logo.jpg" alt="architectural_">
+                    <span class="image-name">architectural_</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
