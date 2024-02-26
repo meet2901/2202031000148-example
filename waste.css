@@ -1,0 +1,55 @@
+.op>ul{
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    }
+    .imt>ul{
+    /* background-color: grey; */
+    
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* flex-wrap:wrap ; */
+    /* flex-direction: column; */
+    gap: 200px;
+    }
+    .imt li a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    @media only screen and (max-width: 456px) {
+        /* .imt{
+            list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+        } */
+        op>ul{
+            list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 40px; 
+        }
+    }
+    <div class="op"><ul>
+    <li><a href="architectural_.html" class="nav-link"><img src="logo.jpg" alt=""></a></li>
+    <li><a href="copper .html" class="nav-link"><img src="logo.jpg" alt=""></a></li>
+    <li><a href="lacquerware.html" class="nav-link"><img src="logo.jpg" alt=""></a></li>
+    <li><a href="silver.html" class="nav-link"><img src="logo.jpg" alt=""></a></li>
+</ul>
+</div>
+<div class="imt">
+<ul>
+    <li><a href="architectural_.html">architectural_</a></li>
+    <li> <a href="copper .html">copper items</a></li>
+    <li><a href="lacquerware.html">lacquerware</a></li>
+    <li><a href="silver.html">silver</a></li>
+</ul>
+</div>
