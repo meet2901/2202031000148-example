@@ -12,81 +12,93 @@
             box-sizing: border-box;
         }
 
-        /* Navigation Bar Styles */
-        nav {
-            /* background-color: #333; */
-            padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* color: black; */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
         }
 
-        .logo img {
-            height: 40px;
-            width: auto;
-            margin-left: 20px;
+        .navbar {
+            background-color: #fefefe;
+            margin-right: 0px;
+            overflow: hidden;
+            width: 100%;
         }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin-right: 20px;
+        .navbar a {
+            font-size: 20px;
         }
 
-        .nav-links li {
-            margin: 0 10px;
-        }
-
-        .nav-links li a {
-            color: rgb(0, 0, 0);
+        .navbar a.logo {
+            float: left;
+            
+            display: block;
+            color: rgb(3, 1, 1);
+            text-align: center;
+            padding: 14px 20px;
             text-decoration: none;
         }
 
+        .navbar .nav-links {
+            float: right;
+            list-style-type: none;
+            position: relative;
+            bottom: 20px;
+            margin: 0;
+            padding: 0;
+        }
 
-        @media screen and (max-width: 456px) {
-            .nav-links {
-                display: none;
-            }
+        .navbar .nav-links li {
+            float: left;
+        }
 
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        .navbar .nav-links li a {
+            display: block;
+            color: rgb(5, 5, 5);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
 
-            .logo {
-                margin: 10px 20px;
-            }
+        .navbar .nav-links li a:hover {
+            background-color: #170f0f;
+            color: rgb(255, 255, 255);
+        }
 
-            .nav-links {
-                margin: 10px 20px;
-            }
+        .logo img {
+            position: relative;
+            top: 25px;
+            left: 20px;
+            height: 40px;
+            width: auto;
+            margin-left: 20px
+        }
 
-            .nav-links li {
-                margin: 5px 0;
-            }
-
-            .nav-links li a {
-                padding: 5px 0;
-                border-bottom: 1px solid white;
-                width: 100%;
-                display: block;
+        @media only screen and (max-width: 496px) {
+            .navbar a {
+                font-size: 10px;
+                margin-right: 0px;
             }
         }
 
-        /* for image set */
         .imgd {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
             width: 100%;
-            /* height: ; */
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .imgd img {
+            
+            width: 100%;
+            height: auto;
+            display: block;
+
         }
 
         .content {
-            /* position: relative; */
-            /* bottom: 80px; */
             top: 600px;
+            margin-right: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -97,34 +109,48 @@
         .content>p {
             padding: 20px;
             margin: 10px;
-            /* display: ; */
-
         }
 
         .container {
+            padding: 20px;
+            /* margin: 10px; */
+            /* margin-right: 0px; */
             list-style-type: none;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* display: flex; */
-            /* flex-wrap: wrap; */
-            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .container ul li a img{
+            height: 112.17px;
+            width: 69.5px;
         }
 
         .image-list {
             list-style-type: none;
-            padding: 0;
+            padding: 20px;
+            margin: 10px;
+            display: flex;
+            gap: 30px;
+
+
         }
 
         .image-list-item {
             display: inline-block;
             width: 25%;
             text-align: center;
+            margin-bottom: 5px;
         }
 
         .image-list-item img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
             width: 100%;
             height: auto;
+
         }
 
         .image-name {
@@ -132,24 +158,79 @@
             text-decoration: none;
         }
 
-        @media (max-width:456px) {
+        @media only screen and (max-width: 496px) {
+            .imgd {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            .content {
+                top: 600px;
+                display: flex;
+                flex-direction: column;
+                font-size: 10px;
+                justify-content: center;
+                align-items: center;
+                color: rgb(49, 112, 112);
+            }
+
+            .content>p {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .container {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                columns: 1;
+                column-gap: 10px;
+            }
+
+            .image-list {
+                padding: 30px;
+                margin: -43px;
+                gap: 10px;
+
+            }
+
             .image-list-item {
-                width: 50%;
+                display: flex;
+                width: 25%;
+                font-size: 10px;
+            }
+
+            .image-list-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            .image-name {
+                color: rgb(0, 0, 0);
+                text-decoration: none;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav>
-        <div class="logo"><img src="logo.jpg" alt="logo"></div>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="logo">
+        </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="butten.html">Login/Signup</a></li>
         </ul>
-    </nav>
+    </div>
+
     <div class="imgd">
         <img src="budha.png" alt="img">
     </div>
@@ -168,24 +249,32 @@
             <li class="image-list-item">
                 <a href="architectural_.html">
                     <img src="logo.jpg" alt="architectural_">
-                    <span class="image-name">architectural_</span>
+                    <span class="image-name">architectural items</span>
+                </a>
+            </li>
+            <li class="image-list-item">
+                <a href="copper.html">
+                    <img src="logo.jpg" alt="architectural_">
+                    <span class="image-name">copper items</span>
                 </a>
             </li>
             <li class="image-list-item">
                 <a href="architectural_.html">
                     <img src="logo.jpg" alt="architectural_">
-                    <span class="image-name">architectural_</span>
+                    <span class="image-name">lacquerware items</span>
                 </a>
             </li>
             <li class="image-list-item">
                 <a href="architectural_.html">
                     <img src="logo.jpg" alt="architectural_">
-                    <span class="image-name">architectural_</span>
+                    <span class="image-name">silver jewellery</span>
                 </a>
             </li>
         </ul>
     </div>
-
+    <div class="content">
+        <h1>New arrive</h1>
+    </div>
 </body>
 
 </html>
